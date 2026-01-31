@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-traversing & accessing</title>
+</head>
+
+<body>
+    <input type="number" id="element">
+    <button onclick="getelement()">Get element</button>
+</body>
+
+<script>
+    let data = [10, 80, 20, 60, 40, 64, 70, 45, 16, 34];
+    // for (let i = 0; i < data.length; i++) {
+    //     console.log(data[i]);
+    //     document.write(`Array ${i} value is ${data[i]} <br>`);
+    // }
+
+    // accessing
+    // let x = 4;
+    // document.write(`${data[x]}`);
+
+    function getelement() {
+        const res = document.getElementById("element").value;
+        if (res > data.length - 1) {
+            alert("Please enter small value")
+        } else {
+            alert(`value is ${data[res]} * 2 = ${data[res] * 2}`)
+        }
+    }
+</script>
+
+</html>

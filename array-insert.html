@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert element in Array</title>
+</head>
+
+<body>
+
+    <input type="number" id="getpos" placeholder="Enter position">
+    <input type="number" id="entnvalue" placeholder="Enter New value">
+    <button onclick="insertNewval()">set new value</button>
+</body>
+<script>
+    // let data = [10, 80, 20, 60, 40, 64, 70, 45, 16, 34];
+    // let newel = 50;
+    // let position = 2;
+    // console.warn(data);
+
+    // for (let i = data.length - 1; i >= 0; i--) {
+    //     if (i >= position) {
+    //         data[i + 1] = data[i];
+    //         if (i == position) {
+    //             data[i] = newel
+    //         }
+    //     }
+    // }
+    // console.log(data);
+
+    function insertNewval() {
+        let data = [10, 80, 20, 60, 40, 64, 70, 45, 16, 34];
+        console.log(data, 33)
+        const position = document.getElementById('getpos').value;
+        const newel = document.getElementById('entnvalue').value;
+
+        for (let i = data.length - 1; i >= 0; i--) {
+            if (i >= position) {
+                data[i + 1] = data[i];
+                if (i == position) {
+                    data[i] = newel;
+                }
+            }
+        };
+        console.log(data, "41")
+    }
+</script>
+
+</html>
