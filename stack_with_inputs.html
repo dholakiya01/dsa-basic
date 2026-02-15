@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack with input</title>
+</head>
+
+<body>
+    <input type="text" name="add" id="new">
+    <button onclick="push()">CLick and push</button>
+    <button onclick="pop()">CLick and Remove in stack</button>
+    <button onclick="display()">CLick for display</button>
+</body>
+<script>
+    let data = [];
+    let max = 5;
+    let currentSize = data.length;
+    
+    function push() {
+        if (currentSize >= max) {
+            alert("Stack is full you can't add " );
+        }
+        data[currentSize] = document.getElementById('new').value;
+        currentSize++
+        console.log(data, "Data......");
+        data[currentSize] = document.getElementById('new').value = ' ';
+    };
+
+    function pop(){
+        if(currentSize > 0){
+            currentSize -= 1;
+            data.length = currentSize;
+            console.log(data, "Data......");
+        }else{
+            alert('Stack is alredy empty')
+        }
+    };
+
+    function display(){
+        for(i=0; i<currentSize; i++){
+            document.write(data[i])
+            console.log(data[i],"Data.....")
+        }
+    }
+
+</script>
+
+</html>

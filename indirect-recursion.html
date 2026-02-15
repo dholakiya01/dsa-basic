@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect redcursion</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let money = 100;
+    let apple = 0;
+    let totalApple = 0;
+    function buyapple(x) {
+        if (x > 0) {
+            console.log("I have ",x,"RS",totalApple)
+            buymore(x)
+        } else {
+            console.log("I don't money", totalApple)
+        }
+    };
+
+    function buymore(x) {
+        totalApple++
+        buyapple(x-10);
+        console.warn("Buy more", x);
+    };
+    buyapple(money);
+</script>
+
+</html>

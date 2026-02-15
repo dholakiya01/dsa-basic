@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and Tail recursion</title>
+</head>
+
+<body>
+    <h1>Head and Tail recursion</h1>
+    <ul>
+        <li>Understand Debugger?</li>
+        <li>How js works (call stack main)</li>
+        <li>Head recursion</li>
+        <li>Tail recursion</li>
+    </ul>
+</body>
+
+<script>
+    // function colors() {
+    //     let data = 20;
+    //     console.warn(data);
+    // }
+    // function days() {
+    //     colors()
+    // }
+    // function fruits() {
+    //     days()
+    // }
+    // function topfunction() {
+    //     fruits()
+    // }
+    // topfunction();
+
+
+    // Head and tail Recursion ====> for execution understanding learn debugger and call stack so concept clear more easy...
+    function test(x) {
+        // console.log(x, "head (Upper side any opration is head recursion)")
+        if (x > 0) {
+            test(x - 1);
+        }
+        console.log(x, "tail (Below side any opration is tail recursion)")
+    };
+    test(5);
+</script>
+
+</html>

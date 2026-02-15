@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse string with stack in javaScript</title>
+</head>
+
+<body>
+    <h1>Reverse string with stack in javaScript</h1>
+</body>
+<script>
+    let data = [];
+    let currentSize = data.length;
+
+    function push(newval) {
+        data[currentSize] = newval;
+        currentSize++;
+
+    };
+    let lastremoveitem;
+    function pop() {
+        lastremoveitem = data[currentSize-1];
+        currentSize -= 1;
+        data.length = currentSize;
+        return lastremoveitem;
+    };
+
+    function reverseStr(item) {
+        for (i = 0; i < item.length; i++) {
+            push(item[i])
+        }
+        for (i = 0; i < item.length; i++) {
+            // console.warn(pop())
+            item[i] = pop();
+        }
+    }
+
+    let str = "darshan";
+    str = str.split("");
+    reverseStr(str);
+    // console.log(str, "String")
+    // push(10);
+    // push(20);
+    // push(30);
+    console.log("Stack",str) 
+
+    // convert array into string
+    console.log(str.join(""));
+
+    // console.warn(data);`
+</script>
+
+</html>

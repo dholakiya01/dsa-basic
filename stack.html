@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in javascrio</title>
+</head>
+
+<body>
+    <h1>Stack in javaScript</h1>
+</body>
+<script>
+    // let data = [20, 8, 9, 6, 7, 42, 44, 12];
+    let data = [];
+    let currentSize = data.length
+    let maxvalue = 5;
+
+    function push(val) {
+        if(currentSize >= maxvalue){
+            alert("Stack is full you can't add " + + val)
+        }
+        data[currentSize] = val;
+        currentSize+=1   
+    };
+
+    function pop(){
+        if(currentSize > 0){
+            currentSize -= 1;
+            data.length = currentSize;
+        }else{
+            alert("Stack is alredy empty...")
+        }
+    }
+
+
+    push(20);
+    push(20);
+    push(20);
+    pop();
+  
+    console.log(data, "data.....")
+
+</script>
+
+</html>
