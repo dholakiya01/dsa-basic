@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort in javaScript</title>
+</head>
+
+<body>
+    <h1>Selection Sort in javaScript</h1>
+</body>
+<script>
+    let data = [10, 850, 80, 8, 7, 890, 70, 4];
+    console.log(data,"Without sort.")
+    function selectionSort(items) {
+        let midId;
+        for (let i = 0; i < data.length; i++) {
+            midId = i;
+            for (j = i + 1; j < data.length; j++) {
+                if (data[j] < data[midId]) {
+                    midId = j;
+                }
+            };
+            let temp = data[midId];
+            data[midId] = data[i];
+            data[i] = temp;
+        }
+    };
+    selectionSort(data);
+    console.warn(data,"Sorterd....")
+</script>
+
+</html>

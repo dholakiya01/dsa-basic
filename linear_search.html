@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search with javaScript</title>
+</head>
+
+<body>
+    <h1>Linear Search with javaScript</h1>
+    <input type="number" id="el" placeholder="Enter Element">
+    <button onclick="searchEl()">Search</button>
+</body>
+<script>
+    let data = [10, 20, 24, 80, 90, 9, 8, 96, 74];
+    let find = 80;
+    let position = undefined;
+
+    // for (let index = 0; index < data.length; index++) {
+    //     if(data[index] === find){
+    //         position = index;
+    //         break;
+    //     };
+    // };
+
+    function searchEl() {
+        let data = [10, 20, 24, 80, 90, 9, 8, 96, 74];
+        let find = document.getElementById('el').value;
+        let position = undefined;
+        for (let index = 0; index < data.length; index++) {
+            if(data[index] == find){
+                position = index;
+                break
+            }
+        }
+        if (!position) {
+            alert("Element not found.")
+        }else{
+            alert("Element position is." + position )
+
+        }
+        console.log(position)
+    }
+    console.log(position);
+</script>
+
+</html>
