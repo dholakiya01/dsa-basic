@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum occuring character in string</title>
+</head>
+<body>
+    <h1>Maximum occuring character in string</h1>
+</body>
+    <script>
+         let str = 'hello aabbbbccc ';
+         let srtobj = {};
+         let maxkey = '';
+
+         for(let i = 0; i<str.length; i++){
+            console.warn(str[i]);
+            let key = str[i];
+            if(!srtobj[key]){
+                srtobj[key] = 0
+            };
+            srtobj[key]++
+            if(maxkey == '' || srtobj[key] > srtobj[maxkey] ){
+                maxkey = key // str[i]
+            };
+         };
+         console.log(srtobj);  // {h: 1, e: 1, l: 2, o: 1}
+         console.log(maxkey);  // check which key is max repet
+    </script>
+</html>

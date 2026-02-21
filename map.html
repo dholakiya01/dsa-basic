@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Dsa with javascript</title>
+</head>
+
+<body>
+    <h1>Map Dsa with javascript</h1>
+</body>
+<script>
+    let data = new Map([
+        ['name', "darshan"],
+        [123, "number"],
+        [true, true],
+    ]);
+    console.log(data);
+    console.log(data.set('company',"tata")); // add new value 
+    console.log(data.size) // check size
+    console.log(data.has(123)) // check key exists
+    console.log(data.get('name')) // in key get value
+    // console.log(data.clear()) // clear all data
+
+    for(x of data){
+        console.log(`Keys are : ${x[0]} & values are : ${x[1]}`)
+    }
+</script>
+
+</html>

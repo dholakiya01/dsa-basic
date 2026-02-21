@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertaion sort in javascript</title>
+</head>
+
+<body>
+    <h2>Insertaion sort in javascript</h2>
+</body>
+<script>
+    let data = [12, 8, 548, 88, 9, 87];
+    function InsertaionData(arr) {
+        let i, current, j;
+        for (let i = 0; i < arr.length; i++) {
+            current = arr[i];
+            j = i - 1;
+            while (j >= 0 && data[j] > current) {
+                data[j + 1] = data[j];
+                j = j - 1;
+            }
+            data[j + 1] = current;
+
+        }
+    }
+    InsertaionData(data);
+    console.log(data)
+</script>
+
+</html>

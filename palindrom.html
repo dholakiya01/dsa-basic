@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check string is palindrom or not</title>
+</head>
+
+<body>
+    <h1>Check string is palindrom or not</h1>
+</body>
+<script>
+    function palindrom(data) {
+        let start = 0;
+        let end = data.length - 1;
+        let result = true;
+        while (end > start) {
+            if (data[start] != data[end]) {
+                result = false;
+            }
+            start++;
+            end--;
+        };
+        return result;
+    };
+
+    let st1 = 'level';
+    let fn = palindrom(st1);
+    console.log(fn);
+
+</script>
+
+</html>

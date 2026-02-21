@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in javascript</title>
+</head>
+<body>
+    <h1>Object in javascript</h1>
+</body>
+    <script>
+        let data = {
+            name : "abc",
+            age : 12,
+            // getname : function(){
+            //    return this.name;
+            // }
+        }
+        // delete data.name // remove name key
+        console.log(data);
+        // console.log(data.getname()); // call function in object
+
+        // for(x in data){
+        //     // console.warn("key name:", x) // Only get keys
+        //     console.log("Value : ", data[x]) // Only get value
+        // }
+
+        console.log(Object.keys(data)) // Get only keys
+        console.log(Object.values(data)) // Get only value
+        console.log(Object.entries(data)) // Get key value in array format. ex: [name, darshan] like create element
+    </script>
+</html>
